@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+
+%transition{
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+}
+*{
+	
+	scroll-behavior: smooth;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+header{
+		background: #F0FFF0;
+		padding-top: 20px;
+		padding-bottom:20px;
+}
+.navbar-brand{
+	img{
+	max-width: 150px;	
+	}
+	
+}
+
+.navbar-nav{
+	li{
+		a.nav-link{ 
+			font-size: 16px;
+			line-height: 24px;  
+			color: #000000 !important;
+			border-radius: 33px;
+			padding: 12px 36px !important;
+			border-radius: 33px;
+			position: relative;
+			overflow: hidden;
+	    	box-shadow: inset  0 0 0 3px transparent;
+			@extend %transition;
+				span{
+					position: relative;
+					z-index: 1;
+				}
+				&:hover{
+					color: #fff !important;
+				}
+				&:focus{
+					outline: none;
+					outline-color: transparent;
+				    box-shadow: inset 0 0 0 3px #21B573;
+
+				}
+
+				&::after{
+					content: "";
+			    background: #21B573;
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    z-index: 0;
+			    top: 0;
+			    left: 0;
+			    @extend %transition; 
+			    -webkit-transform: scaleY(0);
+			    transform: scaleY(0);
+			    -webkit-transform-origin: 50%;
+			    transform-origin: 50%;
+				}
+
+				&:hover::after{
+					height: 100%;
+					  -webkit-transform: scaleY(1);
+			    	transform: scaleY(1);
+				}
+
+							 
+					}
+
+					&:last-child a{
+	    				box-shadow: inset  0 0 0 3px #21B573;
+						&:hover{
+							color:#000 !important;
+						}
+						&::after{
+							-webkit-transform: scaleY(1);
+			    				transform: scaleY(1);
+						}
+						&:hover::after{ 
+							height: 100%;
+							  -webkit-transform: scaleY(0);
+					    	transform: scaleY(0);
+						}
+					}
+					 
+				}
+
+			}
+
+
+ 
+
+.banner{
+	padding: 70px 0;
+	 strong{
+		font-size: 16px;
+		line-height: 24px;
+		color: #FD511A;
+		font-weight: 400;
+
+	}
+	h1{
+		font-weight:800;
+		font-size: 48px;
+		line-height: 70px;
+		color: #000000;
+
+    max-width: 430px;
+		span{
+			color: #21B573;
+		}
+	}
+	p{
+		font-size: 16px;
+		line-height: 36px;
+		color: #6C6B6B;
+    max-width: 400px;
+	}
+	img{}
+}
+
+
+.btn-custom{
+	border-radius: 33px;
+	padding: 12px 36px;
+	color: #fff;
+	border-radius: 33px;
+	position: relative;
+	overflow: hidden;
+	    box-shadow: inset  0 0 0 3px #21B573;
+    @extend %transition;
+	span{
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover{
+		color: #21B573;
+	}
+	&:focus{
+		outline: none;
+		outline-color: transparent;
+	    box-shadow: inset 0 0 0 3px #21B573;
+
+	}
+
+	&::after{
+		content: "";
+    background: #21B573;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    @extend %transition;
+
+
+
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+	}
+
+	&:hover::after{
+		height: 100%;
+		  -webkit-transform: scaleY(0);
+    	transform: scaleY(0);
+	}
+}
+
+
+.feature-section{
+	padding: 30px 0;
+	.feature{
+		text-align: center;
+	    background: #F8FFFB;
+	    border-radius: 10px;
+	    min-height: 270px;
+	    max-width: 270px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	    @extend %transition;
+
+		&:hover{
+			background: #FFFFFF;
+box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+		}
+		img{
+			max-width: 66px;
+		}
+		h2{
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 36px; 
+			color: #413960;
+			margin-bottom: 0;
+    margin-top: 15px;
+		}
+		a{
+			font-size: 16px;
+			line-height: 24px;
+			color: #585859;
+
+			&:hover{
+				text-decoration:none;
+			}
+		}
+	}
+}
+
+
+.course-section{
+	padding: 50px 0;
+	h1{
+		font-size: 36px;
+		line-height: 54px;
+		color: #413960;
+		font-weight: 600;
+		padding: 30px 0;
+	}
+	.course{
+		border:0;
+		box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+border-radius: 18px;
+		.card-body{
+			img{
+
+			}
+			h2{
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 36px;
+				color: #413960;
+				margin: 10px 0;
+			}
+			p{
+				font-size: 16px;
+				line-height: 24px;
+				color: #585859;
+			}
+			.nav{
+				justify-content: space-between;
+				margin-top: 25px;
+				li{
+					display: flex;
+					align-items: center;
+					img{
+						width: 22px;
+					}
+					a{
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 24px; 
+						color: #585859;
+						margin-left: 5px;
+
+						&:hover{
+							text-decoration:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.testimonial-section{
+	padding: 50px 0;
+	h1{
+		font-size: 36px;
+		line-height: 54px;
+		color: #413960;
+		font-weight: 600;
+		padding: 30px 0;
+	}
+	p{
+		font-size: 16px;
+line-height: 30px;
+/* or 187% */
+
+
+color: #000000;
+	}
+	img{
+		max-width: 120px;
+	}
+}
+
+
+footer{
+	padding: 50px 0 20px;
+	background: #282531;
+	p{
+		font-size: 16px;
+		line-height: 30px;
+		color: #FFFFFF;
+	}
+	h3{
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 30px;
+		color: #FFFFFF;
+	}
+	ul{
+		li{
+			a{
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 30px;
+				color: #FFFFFF;
+				@extend %transition;
+				&:hover{
+					color: #21B573;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.copyright{
+		text-align: center;
+		padding-top: 50px;	
+		p{
+			font-size: 16px;
+			line-height: 30px; 
+			color: #CDCDCD;
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+
+
+
+@media (max-width: 1199px){
+	.course-section {
+		.course{
+		 .card-body {
+		 	.nav {
+		 		li {
+		 			img{
+		 				width: 16px;
+		 			}
+		 			a {
+		 				font-size: 12px;
+		 				}
+		 				}
+		 				}
+		 				}
+		 			}
+	}
+	.btn-custom {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+.navbar-nav li a.nav-link {
+     padding: 10px 25px !important;
+     font-size: 14px;
+    }
+    .banner h1 { 
+    font-size: 45px; 
+    line-height: 1.3;
+}
+.feature-section .feature h2 {
+    font-size: 22px;
+    }
+    .feature-section .feature a {
+    font-size: 14px;
+}
+.course-section .course .card-body h2 {
+    font-size: 20px;
+    }
+}
+@media (max-width: 991px){
+	.feature-section .feature img {
+    max-width: 45px;
+}
+.feature-section .feature h2 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.feature-section .feature a {
+    font-size: 13px;
+}
+.feature-section .feature { 
+    min-height: 160px;
+    }
+    .course  .card-body{
+    	padding: 10px;
+    }
+   .course-section .course .card-body h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.course-section .course .card-body p {
+    font-size: 14px;
+    line-height: 14px;
+    }
+    .btn-custom {
+    padding: 8px 20px;
+    font-size: 12px;
+}
+.course-section .course .card-body .nav li img {
+    width: 12px;
+}
+.course-section .course .card-body .nav li a {
+    font-size: 10px;
+    margin-left: 3px;
+}
+.course-section .course .card-body .nav { 
+    margin-top: 12px;
+}
+.testimonial-section {
+    padding: 30px 0;
+}
+.testimonial-section p {
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+}
+.banner h1 {
+    font-size: 40px; 
+}
+.banner p {
+    font-size: 15px;
+    line-height: 25px;
+    }
+    footer p {
+    font-size: 13px;
+    line-height: 24px;
+}
+footer ul li a { 
+    font-size: 13px;
+    line-height: 23px;
+    }
+    footer .copyright p {
+    font-size: 14px;
+    line-height: 24px;
+}
+}
+@media (max-width: 767px){
+	.banner {
+    padding: 40px 0;
+    text-align: center;
+}
+.banner h1 {
+    font-size: 35px;
+    margin: auto;
+    max-width: 300px;
+}
+.banner p {
+    font-size: 14px;
+    line-height: 25px;
+    max-width: 380px;
+    margin: 10px auto;
+}
+.banner img{
+	max-width: 400px;
+    margin-top: 20px;
+}
+.course{
+	margin-bottom: 30px;
+}
+.testimonial-section { 
+    text-align: center;
+}
+	footer p {
+    text-align: center;
+    font-size: 15px;
+}
+}
+@media (max-width: 575px){
+	footer p {
+    text-align: left; 
+}
+footer h3 { 
+    margin-bottom: 0;
+    font-size: 16px;
+}
+footer .copyright p { 
+    text-align: center;
+}
+.banner img {
+    max-width: 300px;
+    margin-top: 20px;
+}
+.feature-section .feature { 
+    margin-bottom: 30px;
+}
+.course-section {
+    padding: 0px 0;
+}
+} 
